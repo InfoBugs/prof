@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Moved | M14R41</title>
+
+    <!-- Redirect after 5 seconds -->
+    <meta http-equiv="refresh" content="5; url=https://m14r41.in">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Inter,Segoe UI,Arial,sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+            overflow:hidden;
+            color:#fff;
+        }
+
+        .bg{
+            position:absolute;
+            inset:0;
+            overflow:hidden;
+        }
+
+        .circle{
+            position:absolute;
+            border-radius:50%;
+            background:rgba(255,255,255,.05);
+            animation:float 12s infinite ease-in-out;
+        }
+
+        .circle:nth-child(1){
+            width:260px;
+            height:260px;
+            top:-80px;
+            left:-60px;
+        }
+
+        .circle:nth-child(2){
+            width:200px;
+            height:200px;
+            right:-50px;
+            bottom:-60px;
+            animation-delay:2s;
+        }
+
+        .circle:nth-child(3){
+            width:120px;
+            height:120px;
+            right:18%;
+            top:15%;
+            animation-delay:4s;
+        }
+
+        @keyframes float{
+            0%,100%{transform:translateY(0);}
+            50%{transform:translateY(-25px);}
+        }
+
+        .card{
+            position:relative;
+            z-index:1;
+            width:min(90%,620px);
+            padding:50px 40px;
+            text-align:center;
+            border-radius:24px;
+            background:rgba(255,255,255,.08);
+            backdrop-filter:blur(18px);
+            border:1px solid rgba(255,255,255,.12);
+            box-shadow:0 20px 50px rgba(0,0,0,.45);
+        }
+
+        .logo{
+            font-size:48px;
+            margin-bottom:18px;
+        }
+
+        h1{
+            font-size:2rem;
+            margin-bottom:12px;
+        }
+
+        p{
+            color:#d1d5db;
+            line-height:1.7;
+            margin-bottom:14px;
+        }
+
+        .domain{
+            color:#60a5fa;
+            font-weight:700;
+        }
+
+        .count{
+            margin:25px 0;
+            font-size:1.1rem;
+        }
+
+        #timer{
+            color:#22c55e;
+            font-size:1.5rem;
+            font-weight:700;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:10px;
+            padding:14px 34px;
+            text-decoration:none;
+            color:#fff;
+            font-weight:600;
+            border-radius:50px;
+            background:linear-gradient(90deg,#2563eb,#06b6d4);
+            transition:.25s;
+            box-shadow:0 10px 25px rgba(37,99,235,.35);
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+            box-shadow:0 18px 35px rgba(37,99,235,.45);
+        }
+
+        footer{
+            margin-top:28px;
+            color:#9ca3af;
+            font-size:.9rem;
+        }
+
+        @media(max-width:600px){
+            .card{
+                padding:35px 25px;
+            }
+
+            h1{
+                font-size:1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+<div class="card">
+
+    <div class="logo">🚀</div>
+
+    <h1>Profile Has Moved</h1>
+
+    <p>
+        The profile previously hosted at
+        <strong class="domain">profile.m14r41.in</strong>
+        has been moved to the new homepage.
+    </p>
+
+    <p>
+        You will be redirected automatically in
+        <span id="timer">5</span> seconds.
+    </p>
+
+    <a class="btn" href="https://m14r41.in">
+        Go to m14r41.in →
+    </a>
+
+    <footer>
+        © 2026 M14R41 • Thanks for visiting.
+    </footer>
+
+</div>
+
+<script>
+let seconds = 5;
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+    seconds--;
+    timer.textContent = seconds;
+
+    if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.replace("https://m14r41.in");
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
